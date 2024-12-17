@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = require('./models/user'); // Adjust path to your User model
+const { User } = require('./database');
 
 async function connectToDatabase() {
   try {

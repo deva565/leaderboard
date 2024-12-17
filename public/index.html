@@ -8,22 +8,44 @@
 </head>
 <body>
   <h1>Leaderboard</h1>
+  
+  <!-- Theme Toggle -->
+  <div id="theme-toggle-container">
+    <button id="theme-toggle" aria-label="Toggle Theme">
+      🌞
+    </button>
+  </div>
+  
 
+  <!-- Leaderboard Container -->
   <div id="leaderboard-container">
     <div class="leaderboard-header">
-      <div class="rank">Rank</div>
-      <div class="name">Name</div>
-      <div class="rollNo">Roll No</div>
-      <div class="points">Points</div>
+      <div>Rank</div>
+      <div>Name</div>
+      <div>Roll No</div>
+      <div>Points</div>
     </div>
     <ul id="leaderboard-list"></ul>
   </div>
 
+  <!-- Pagination Controls -->
   <div id="pagination-controls">
-    <button id="prev-btn" disabled>Previous</button>
+    <button id="prev-btn">Previous</button>
     <span id="current-page">Page 1</span>
     <button id="next-btn">Next</button>
   </div>
+
+  <!-- User Modal -->
+  <div id="user-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="user-name">Name</h2>
+      <p id="user-stats">Details about the user...</p>
+    </div>
+  </div>
+
+  <!-- Search Bar (at the bottom) -->
+  <input type="text" id="search-bar" placeholder="Search by name or roll no">
 
   <script src="script.js"></script>
 </body>

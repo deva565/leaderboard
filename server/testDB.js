@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 
 async function testPermissions() {
   try {
+    // Encode the password since it contains special characters
+    const password = encodeURIComponent('deva7777@');
+    
     // Connect with user credentials
-    await mongoose.connect('mongodb://devadev565:deva7777@@localhost:27017/leaderboard', {
+    await mongoose.connect(`mongodb://devadev565:${password}@localhost:27017/leaderboard`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
